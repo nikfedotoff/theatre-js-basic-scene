@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cs_office with real light
+* source:	https://sketchfab.com/3d-models/cs-office-with-real-light-7321fe525c854b87944c78af5f009128
+* author:	Neo_minigan (https://sketchfab.com/neominigan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cs_office with real light" (https://sketchfab.com/3d-models/cs-office-with-real-light-7321fe525c854b87944c78af5f009128) by Neo_minigan (https://sketchfab.com/neominigan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
