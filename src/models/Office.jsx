@@ -5,14 +5,14 @@ license: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 source: https://sketchfab.com/3d-models/cs-office-with-real-light-7321fe525c854b87944c78af5f009128
 title: Cs_office with real light
 */
-
+import { editable as e } from '@theatre/r3f'
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/office/scene.gltf')
   return (
-    <group {...props} dispose={null}>
+    <e.group theatreKey="Map" {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.03}>
           <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -62,7 +62,7 @@ export default function Model(props) {
           </group>
         </group>
       </group>
-    </group>
+    </e.group>
   )
 }
 
