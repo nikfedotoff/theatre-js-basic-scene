@@ -19,13 +19,7 @@ if (import.meta.env.DEV) {
 }
 
 function App() {
-    useEffect(() => {
-        demoSheet.sequence.play()
-    })
-
-    if (demoSheet.isReady) {
-        demoSheet.sequence.play()
-    }
+    
 
     return (
         <Canvas camera={{ position: [-50, -12, 3], zoom: 1 }}>
