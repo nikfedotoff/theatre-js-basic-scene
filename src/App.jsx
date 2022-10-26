@@ -4,8 +4,8 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { SheetProvider, editable as e } from '@theatre/r3f'
 import Office from './models/Office'
-import studio from '@theatre/studio'
-import extension from '@theatre/r3f/dist/extension'
+// import studio from '@theatre/studio'
+// import extension from '@theatre/r3f/dist/extension'
 import { getProject } from '@theatre/core'
 import demoProjectState from './jsons/scene3.json'
 
@@ -13,13 +13,19 @@ const demoSheet = getProject('Office2', { state: demoProjectState }).sheet(
     'Office2'
 )
 
-if (import.meta.env.DEV) {
-    // studio.initialize()
-    // studio.extend(extension)
-}
+// if (import.meta.env.DEV) {
+//     studio.initialize()
+//     studio.extend(extension)
+// }
 
 function App() {
-    
+    useEffect(() => {
+        demoSheet.sequence.play({ iterationCount: Infinity })
+    }, [])
+
+    if (demoSheet.isReady) {
+        demoSheet.sequence.play({ iterationCount: Infinity })
+    }
 
     return (
         <Canvas camera={{ position: [-50, -12, 3], zoom: 1 }}>

@@ -66,4 +66,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/scene.gltf')
+useGLTF.preload('/office/scene.gltf')
