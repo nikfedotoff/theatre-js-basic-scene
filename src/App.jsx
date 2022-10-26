@@ -7,25 +7,21 @@ import Office from './models/Office'
 // import studio from '@theatre/studio'
 // import extension from '@theatre/r3f/dist/extension'
 import { getProject } from '@theatre/core'
-import demoProjectState from './jsons/scene3.json'
+import demoProjectState from './jsons/scene5.json'
 
 const demoSheet = getProject('Office2', { state: demoProjectState }).sheet(
     'Office2'
 )
 
-// if (import.meta.env.DEV) {
-//     studio.initialize()
-//     studio.extend(extension)
-// }
+if (import.meta.env.DEV) {
+    // studio.initialize()
+    // studio.extend(extension)
+}
 
 function App() {
     useEffect(() => {
-        demoSheet.sequence.play({ iterationCount: Infinity })
+        demoSheet.sequence.play({ iterationCount: Infinity }).then(() => console.log('done'))
     }, [])
-
-    if (demoSheet.isReady) {
-        demoSheet.sequence.play({ iterationCount: Infinity })
-    }
 
     return (
         <Canvas camera={{ position: [-50, -12, 3], zoom: 1 }}>
