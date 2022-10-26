@@ -26,7 +26,7 @@ function App() {
     return (
         <Canvas camera={{ position: [-50, -12, 3], zoom: 1 }}>
             <SheetProvider sheet={demoSheet}>
-                <OrbitControls />
+                {/* <OrbitControls /> */}
                 <color attach="background" args={['lightblue']} />
                 <hemisphereLight intensity={0.35} />
                 <spotLight
