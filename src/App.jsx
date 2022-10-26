@@ -12,8 +12,6 @@ import demoProjectState from './jsons/scene1.json'
 const demoSheet = getProject('Office', { state: demoProjectState }).sheet(
     'Office'
 )
-studio.initialize()
-studio.extend(extension)
 
 if (import.meta.env.DEV) {
     studio.initialize()
