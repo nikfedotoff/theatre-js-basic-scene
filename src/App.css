@@ -1,3 +1,18 @@
 #root {
     height: 100%;
 }
+
+.btn {
+    border: none;
+    background: rgba(180, 255, 41, 0.7);
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
