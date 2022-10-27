@@ -4,15 +4,126 @@
 
 .btn {
     border: none;
-    background: rgba(180, 255, 41, 0.7);
-    font-size: 16px;
+    background: transparent;
+    font-size: 20px;
     font-weight: 700;
-    color: #fff;
+    color: rgb(217, 217, 217);
     padding: 6px 16px;
     border-radius: 10px;
     position: absolute;
     left: 50%;
+    transition: color 0.3s ease;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.grain {
+    animation: grain 6s steps(10) infinite;
+    background-image: url(https://duallstudio.com/assets/images/grain.png);
+    background-repeat: repeat;
+    height: 300%;
+    left: -100%;
+    opacity: 0.06;
+    top: -100%;
+    width: 300%;
+    will-change: transform;
+    z-index: 1;
+    position: fixed;
+}
+
+@keyframes grain {
+    0% {
+        -webkit-transform: translate(20%, -15%);
+        transform: translate(20%, -15%);
+    }
+
+    10% {
+        -webkit-transform: translate(-20%, -15%);
+        transform: translate(-20%, -15%);
+    }
+
+    20% {
+        -webkit-transform: translate(20%, -5%);
+        transform: translate(20%, -5%);
+    }
+
+    30% {
+        -webkit-transform: translate(-20%, -5%);
+        transform: translate(-20%, -5%);
+    }
+
+    40% {
+        -webkit-transform: translate(20%, 5%);
+        transform: translate(20%, 5%);
+    }
+
+    50% {
+        -webkit-transform: translate(-20%, 5%);
+        transform: translate(-20%, 5%);
+    }
+
+    60% {
+        -webkit-transform: translate(20%, 15%);
+        transform: translate(20%, 15%);
+    }
+
+    70% {
+        -webkit-transform: translate(-20%, 15%);
+        transform: translate(-20%, 15%);
+    }
+
+    80% {
+        -webkit-transform: translate(20%, 5%);
+        transform: translate(20%, 5%);
+    }
+
+    90% {
+        -webkit-transform: translate(-20%, 5%);
+        transform: translate(-20%, 5%);
+    }
+
+    to {
+        -webkit-transform: translate(20%, -5%);
+        transform: translate(20%, -5%);
+    }
+}
+
+canvas {
+    /* opacity: .5; */
+}
+
+.logo {
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    height: 20px;
+    z-index: 1;
+}
+
+.grain::before,
+.grain::after {
+    content: '';
+    height: 25%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.grain::before {
+    background: linear-gradient(180deg, #050505, transparent);
+    top: 0;
+}
+
+.grain::after {
+    background: linear-gradient(0deg, #050505, transparent);
+    bottom: 0;
 }
